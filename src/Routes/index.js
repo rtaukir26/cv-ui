@@ -4,23 +4,20 @@ import UserCV from "../pages/CV/UserCV";
 import PrivateRoutes from "./PrivateRoutes";
 import CommonOutlet from "./CommonOutlet";
 import { useEffect } from "react";
+import { THEME_MODE } from "../constant/localStorage";
 
 const AppRoutes = () => {
-  // const [hemeValue, setThemeValue] = useState(true);
   useEffect(() => {
-    const getLocalStorageValue = localStorage.getItem("theme-mode");
-
+    const getLocalStorageValue = sessionStorage.getItem(THEME_MODE);
     if (
       getLocalStorageValue === "light-mode" ||
       getLocalStorageValue === null
     ) {
-      // setThemeValue(true);
-      document.getElementById("root")?.classList.add("light-theme");
-      document.getElementById("root")?.classList.remove("dark-theme");
+      document.getElementById("root")?.classList.add("light-mode");
+      document.getElementById("root")?.classList.remove("dark-mode");
     } else {
-      // setThemeValue(false);
-      document.getElementById("root")?.classList.add("dark-theme");
-      document.getElementById("root")?.classList.remove("light-theme");
+      document.getElementById("root")?.classList.add("dark-mode");
+      document.getElementById("root")?.classList.remove("light-mode");
     }
   }, []);
   return (

@@ -1,9 +1,9 @@
 @import "./common.scss";
 
-.light-theme {
+.light-mode {
   @import "./light-mode-file.scss";
 }
 
-.dark-theme {
+.dark-mode {
   @import "./dark-mode-file.scss";
 }
