@@ -13,11 +13,11 @@ const AppRoutes = () => {
       getLocalStorageValue === "light-mode" ||
       getLocalStorageValue === null
     ) {
-      document.getElementById("root")?.classList.add("light-mode");
-      document.getElementById("root")?.classList.remove("dark-mode");
+      document.body.classList.add("light-mode");
+      document.body.classList.remove("dark-mode");
     } else {
-      document.getElementById("root")?.classList.add("dark-mode");
-      document.getElementById("root")?.classList.remove("light-mode");
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("light-mode");
     }
   }, []);
   return (

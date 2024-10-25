@@ -13,13 +13,15 @@ const Header = () => {
 
     if (theme) {
       sessionStorage.setItem(THEME_MODE, "dark-mode");
-      document.getElementById("root")?.classList.add("dark-mode");
-      document.getElementById("root")?.classList.remove("light-mode");
+      //   document.getElementById("root")?.classList.add("dark-mode");
+      //   document.getElementById("root")?.classList.remove("light-mode");
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("light-mode");
       //   toast.success("Light mode")
     } else {
       sessionStorage.setItem(THEME_MODE, "light-mode");
-      document.getElementById("root")?.classList.add("light-mode");
-      document.getElementById("root")?.classList.remove("dark-mode");
+      document.body.classList.add("light-mode");
+      document.body.classList.remove("dark-mode");
     }
   };
   return (
